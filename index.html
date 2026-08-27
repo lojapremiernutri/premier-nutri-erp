@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Produtos — Premier Nutri ERP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Premier Nutri ERP</h1>
+    <div>
+      <span id="user-email" style="color: var(--muted); margin-right: 12px;"></span>
+      <button id="btn-logout" class="secondary">Sair</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2 style="margin-top: 0;">Produtos</h2>
+      <p class="hint">Clique num produto para gerenciar suas variantes (sabor, tamanho, custo, preço).</p>
+      <div id="products" class="grid-products"></div>
+    </div>
+  </main>
+
+  <script type="module" src="assets/products-list.js"></script>
+</body>
+</html>
