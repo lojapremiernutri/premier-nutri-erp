@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Produto — Premier Nutri ERP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1><a href="index.html" style="color: var(--accent); text-decoration: none;">← Premier Nutri ERP</a></h1>
+    <button id="btn-logout" class="secondary">Sair</button>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2 id="product-name" style="margin-top: 0;">Carregando...</h2>
+      <div id="product-brand" class="hint"></div>
+    </div>
+
+    <div class="card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h3 style="margin: 0;">Variantes</h3>
+        <button id="add-variant">+ Nova variante</button>
+      </div>
+      <table id="variants">
+        <thead>
+          <tr>
+            <th>SKU</th><th>Sabor</th><th>Tamanho</th>
+            <th style="text-align:right;">Custo</th>
+            <th style="text-align:right;">Preço</th>
+            <th style="text-align:right;">Margem</th>
+            <th style="text-align:right;">Markup</th>
+            <th style="text-align:center;">Ativo</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p class="hint">Margem = (preço − custo) ÷ preço. Markup = (preço − custo) ÷ custo. Clique em Salvar pra recalcular.</p>
+    </div>
+  </main>
+
+  <script type="module" src="assets/product-detail.js"></script>
+</body>
+</html>
