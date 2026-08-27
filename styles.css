@@ -1,0 +1,68 @@
+:root {
+  --bg: #0d1a2d;
+  --surface: #172a44;
+  --surface-2: #1f3557;
+  --border: #24405f;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --accent: #22d3ee;
+  --accent-hover: #06b6d4;
+  --price: #fbbf24;
+  --danger: #ef4444;
+  --success: #10b981;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 20px; background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+header.topbar h1 { font-size: 18px; margin: 0; color: var(--accent); }
+header.topbar button { background: transparent; color: var(--muted);
+  border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px;
+  cursor: pointer; }
+
+main { max-width: 1100px; margin: 24px auto; padding: 0 20px; }
+
+.card { background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+
+.grid-products { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px; }
+.product-card { background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 14px; cursor: pointer; }
+.product-card:hover { border-color: var(--accent); }
+.product-card h3 { margin: 0 0 6px; font-size: 15px; }
+.product-card .price { color: var(--price); font-weight: 600; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 8px 6px; border-bottom: 1px solid var(--border);
+  text-align: left; font-size: 14px; }
+th { color: var(--muted); font-weight: 500; }
+input[type=text], input[type=number], input[type=email], input[type=password] {
+  background: var(--surface-2); color: var(--text);
+  border: 1px solid var(--border); padding: 6px 8px; border-radius: 6px;
+  width: 100%;
+}
+input[type=number] { text-align: right; }
+button { background: var(--accent); color: #08131f; border: none;
+  padding: 6px 12px; border-radius: 6px; cursor: pointer; font-weight: 600; }
+button:hover { background: var(--accent-hover); }
+button.secondary { background: var(--surface-2); color: var(--text); }
+button.danger { background: var(--danger); color: white; }
+
+.margin, .markup { color: var(--price); font-variant-numeric: tabular-nums; }
+
+.login-wrap { max-width: 360px; margin: 80px auto; }
+.login-wrap label { display: block; margin: 10px 0 4px; color: var(--muted); }
+
+.hint { color: var(--muted); font-size: 13px; margin-top: 8px; }
+.error { color: var(--danger); font-size: 13px; margin-top: 8px; }
