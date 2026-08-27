@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Login — Premier Nutri ERP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-wrap card">
+    <h1 style="color: var(--accent); margin-top: 0;">Premier Nutri ERP</h1>
+    <label>Email</label>
+    <input id="email" type="email" autocomplete="username">
+    <label>Senha</label>
+    <input id="password" type="password" autocomplete="current-password">
+    <div style="margin-top: 14px;">
+      <button id="btn-login" style="width: 100%;">Entrar</button>
+    </div>
+    <div id="msg" class="error"></div>
+  </div>
+
+  <script type="module">
+    import { supabase } from './assets/supabase.js';
+
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session) location.href = 'index.html';
+
+    document.getElementById('btn-login').onclick = async () => {
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const msg = document.getElementById('msg');
+      msg.textContent = '';
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) msg.textContent = error.message;
+      else location.href = 'index.html';
+    };
+  </script>
+</body>
+</html>
