@@ -85,9 +85,12 @@ async function loadStock() {
   const kpis = document.querySelectorAll('#kpis .kpi');
   if (!data) return;
   kpis[2].querySelector('.value').textContent = fmtBRL(data.total_value_at_cost);
- kpis[2].querySelector('.sub').textContent = `${fmtNum(data.total_units)} un · a preço de venda: ${fmtBRL(data.total_value_at_sale)}`;
-  kpis[3].querySelector('.value').textContent = fmtNum(data.low_stock_count);
-  kpis[3].querySelector('.sub').textContent = data.low_stock_count > 0 ? 'Repor com urgência' : 'Tudo dentro do mínimo';
+  kpis[2].querySelector('.sub').textContent = `${fmtNum(data.total_units)} unidades · ${data.active_variants} variantes`;
+  kpis[3].querySelector('.value').textContent = fmtBRL(data.total_value_at_sale);
+  const potentialProfit = Number(data.total_value_at_sale) - Number(data.total_value_at_cost);
+  kpis[3].querySelector('.sub').textContent = `Lucro potencial: ${fmtBRL(potentialProfit)}`;
+  kpis[4].querySelector('.value').textContent = fmtNum(data.low_stock_count);
+  kpis[4].querySelector('.sub').textContent = data.low_stock_count > 0 ? 'Repor com urgência' : 'Tudo dentro do mínimo';
 }
 
 async function loadTop() {
