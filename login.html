@@ -6,31 +6,27 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="login-wrap card">
-    <h1 style="color: var(--accent); margin-top: 0;">Premier Nutri ERP</h1>
+  <div class="login-wrap">
+    <h1>Premier Nutri</h1>
+    <div class="subtitle">ERP interno</div>
     <label>Email</label>
     <input id="email" type="email" autocomplete="username">
     <label>Senha</label>
     <input id="password" type="password" autocomplete="current-password">
-    <div style="margin-top: 14px;">
-      <button id="btn-login" style="width: 100%;">Entrar</button>
-    </div>
-    <div id="msg" class="error"></div>
+    <div style="margin-top: 20px;"><button id="btn-login" style="width: 100%; padding: 10px;">Entrar</button></div>
+    <div id="msg" class="error" style="display:none;"></div>
   </div>
-
   <script type="module">
     import { supabase } from './assets/supabase.js';
-
     const { data: { session } } = await supabase.auth.getSession();
     if (session) location.href = 'index.html';
-
     document.getElementById('btn-login').onclick = async () => {
       const email = document.getElementById('email').value.trim();
       const password = document.getElementById('password').value;
       const msg = document.getElementById('msg');
-      msg.textContent = '';
+      msg.style.display = 'none';
       const { error } = await supabase.auth.signInWithPassword({ email, password });
-      if (error) msg.textContent = error.message;
+      if (error) { msg.style.display = 'block'; msg.textContent = error.message; }
       else location.href = 'index.html';
     };
   </script>
