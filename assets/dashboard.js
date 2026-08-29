@@ -22,7 +22,8 @@ root.innerHTML = `
   <div class="kpi-grid" id="kpis">
     <div class="kpi"><div class="label">Faturamento</div><div class="value">R$ —</div><div class="sub">Carregando...</div></div>
     <div class="kpi success"><div class="label">Lucro líquido</div><div class="value">R$ —</div><div class="sub">Carregando...</div></div>
-    <div class="kpi gold"><div class="label">Valor em estoque</div><div class="value">R$ —</div><div class="sub">Carregando...</div></div>
+      <div class="kpi gold"><div class="label">Custo em estoque</div><div class="value">R$ —</div><div class="sub">Carregando...</div></div>
+    <div class="kpi"><div class="label">Valor em estoque</div><div class="value">R$ —</div><div class="sub">Carregando...</div></div>
     <div class="kpi warning"><div class="label">Estoque baixo</div><div class="value">—</div><div class="sub">Carregando...</div></div>
   </div>
 
