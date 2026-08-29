@@ -6,16 +6,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <script type="module">
-    import { requireAuth } from './assets/auth.js';
-    import { renderShell } from './assets/layout.js';
-    const session = await requireAuth();
-    if (!session) throw new Error('no session');
-    const root = renderShell({ active: 'sales', session });
-    root.innerHTML = `
-      <div class="page-header"><h1>Vendas</h1></div>
-      <div class="card empty">Em construção — próximo módulo.</div>
-    `;
-  </script>
+  <script type="module" src="assets/sales.js"></script>
 </body>
 </html>
