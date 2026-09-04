@@ -112,3 +112,5 @@ button.small { padding: 4px 10px; font-size: 12px; }
 .chip.inactive { background: var(--surface-2); color: var(--muted); }
 .sum-row { display: flex; justify-content: space-between; padding: 5px 0; font-size: 13px; font-variant-numeric: tabular-nums; }
 .sum-row.hint span { color: var(--muted); }
+.kpi.danger-kpi::before { background: linear-gradient(90deg, var(--danger), #b91c1c); }
+.kpi.danger-kpi .value { color: var(--danger); }
