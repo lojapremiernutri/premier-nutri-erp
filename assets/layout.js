@@ -8,6 +8,7 @@ const NAV = [
     { key: 'products',  href: 'products.html',  label: 'Produtos', icon: ic('M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z M3.27 6.96L12 12.01l8.73-5.05 M12 22.08V12') },
     { key: 'stock',     href: 'stock.html',     label: 'Estoque',  icon: ic('M20 7l-8-4-8 4v10l8 4 8-4V7z M4 7l8 4 8-4 M12 11v10') },
     { key: 'sales',     href: 'sales.html',     label: 'Vendas',   icon: ic('M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z M3 6h18 M16 10a4 4 0 0 1-8 0') },
+    { key: 'receivables', href: 'receivables.html', label: 'Recebíveis', icon: ic('M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4 M4 6v12c0 1.1.9 2 2 2h14v-4 M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z') },   
     { key: 'customers', href: 'customers.html', label: 'Clientes', icon: ic('M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M23 21v-2a4 4 0 0 0-3-3.87 M16 3.13a4 4 0 0 1 0 7.75') },
   ]},
   { label: 'Configurações', items: [
