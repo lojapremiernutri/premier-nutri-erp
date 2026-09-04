@@ -84,7 +84,7 @@ function renderPage() {
             <table class="data" id="items-table">
               <thead><tr>
                 <th style="min-width:260px;">Produto / Variante</th>
-                <th class="num" style="width:80px;">Qtd</th>
+                <th class="num" style="width:90px;">Qtd</th>
                 <th class="num" style="width:100px;">Preço</th>
                 <th class="num" style="width:100px;">Desc.</th>
                 <th class="num" style="width:110px;">Subtotal</th>
@@ -144,7 +144,7 @@ function renderItems() {
             ${variants.map(v => `<option value="${v.id}" ${v.id === it.variant_id ? 'selected' : ''}>${esc(variantLabel(v))}</option>`).join('')}
           </select>
         </td>
-        <td class="num"><input class="i-qty" type="number" step="1" min="1" value="${it.quantity}"></td>
+        <td class="num"><input class="i-qty" type="number" step="1" min="1" value="${it.quantity}" style="width:100%; min-width:64px; text-align:center; padding:8px 4px;"></td>
         <td class="num"><input class="i-price" type="number" step="0.01" value="${it.unit_price}"></td>
         <td class="num"><input class="i-disc" type="number" step="0.01" value="${it.discount}"></td>
         <td class="num price-cell subtotal">${subtotal.toFixed(2).replace('.', ',')}</td>
